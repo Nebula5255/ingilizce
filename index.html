@@ -20,119 +20,147 @@
         .shield-logo {
             filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.3));
         }
+        
+        @media (max-width: 640px) {
+            .hero-bg {
+                min-height: 70vh;
+            }
+        }
     </style>
 </head>
 <body class="bg-white text-gray-800">
 
     <!-- NAVIGATION -->
     <header class="sticky top-0 bg-[#001F3F] shadow z-50">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAiIGZpbGw9IiNmZmZmZmYiLz48cmVjdCB5PSI0NSIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMCIgZmlsbD0iI2ZmZmZmZiIvPjxyZWN0IHk9IjkwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwIiBmaWxsPSIjZmZmZmZmIi8+PC9zdmc+" class="w-8 h-8" alt="Logo" />
-                <h1 class="text-2xl font-bold text-white">Thames English Academy</h1>
+        <div class="max-w-7xl mx-auto px-4 py-3 md:px-6 md:py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAiIGZpbGw9IiNmZmZmZmYiLz48cmVjdCB5PSI0NSIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMCIgZmlsbD0iI2ZmZmZmZiIvPjxyZWN0IHk9IjkwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwIiBmaWxsPSIjZmZmZmZmIi8+PC9zdmc+" class="w-8 h-8" alt="Logo" />
+                    <h1 class="text-xl md:text-2xl font-bold text-white truncate">Thames English Academy</h1>
+                </div>
+                
+                <!-- Mobil Menü Butonu -->
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+                
+                <!-- Masaüstü Navigasyon -->
+                <nav class="hidden md:flex space-x-6 text-sm md:text-base">
+                    <a href="#kids" class="text-white hover:text-yellow-300">Thames Kids</a>
+                    <a href="#future" class="text-white hover:text-yellow-300">YDT</a>
+                    <a href="#campus" class="text-white hover:text-yellow-300">Campus</a>
+                    <a href="#pro" class="text-white hover:text-yellow-300">Pro</a>
+                    <a href="#form" class="text-[#001F3F] bg-yellow-400 hover:bg-yellow-500 px-4 py-2 rounded-md font-bold">Başvuru</a>
+                </nav>
             </div>
-            <nav class="space-x-6 text-sm md:text-base">
-                <a href="#kids" class="text-white hover:text-yellow-300">Thames Kids</a>
-                <a href="#future" class="text-white hover:text-yellow-300">YDT</a>
-                <a href="#campus" class="text-white hover:text-yellow-300">Campus</a>
-                <a href="#pro" class="text-white hover:text-yellow-300">Pro</a>
-                <a href="#form" class="text-[#001F3F] bg-yellow-400 hover:bg-yellow-500 px-4 py-2 rounded-md font-bold">Başvuru</a>
-            </nav>
+            
+            <!-- Mobil Navigasyon -->
+            <div id="mobile-menu" class="hidden md:hidden mt-3 pb-2">
+                <nav class="flex flex-col space-y-3">
+                    <a href="#kids" class="text-white hover:text-yellow-300 py-1">Thames Kids</a>
+                    <a href="#future" class="text-white hover:text-yellow-300 py-1">YDT</a>
+                    <a href="#campus" class="text-white hover:text-yellow-300 py-1">Campus</a>
+                    <a href="#pro" class="text-white hover:text-yellow-300 py-1">Pro</a>
+                    <a href="#form" class="text-center text-[#001F3F] bg-yellow-400 hover:bg-yellow-500 px-4 py-2 rounded-md font-bold mt-2">Başvuru</a>
+                </nav>
+            </div>
         </div>
     </header>
 
     <!-- HERO SECTION -->
     <section class="hero-bg flex items-center justify-center">
-        <div class="text-center">
-            <h1 class="text-6xl font-bold text-white tracking-wider mb-4">THAMES</h1>
-            <h2 class="text-3xl font-bold text-white tracking-wide mb-8">ENGLISH ACADEMY</h2>
-            <p class="text-xl text-white mb-10 max-w-2xl mx-auto">Londra'nın kalbinden gelen İngilizce eğitimi ile dünya vatandaşı olma yolculuğunuz başlıyor.</p>
-            <div>
-                <a href="#kids" class="bg-yellow-400 hover:bg-yellow-500 text-[#001F3F] px-6 py-3 rounded-md font-bold text-lg mx-2">Kurslarımız</a>
-                <a href="#form" class="bg-transparent hover:bg-white hover:bg-opacity-10 text-white border-2 border-white px-6 py-3 rounded-md font-bold text-lg mx-2">Başvuru Yap</a>
+        <div class="text-center px-4 py-16 md:py-0">
+            <h1 class="text-4xl md:text-6xl font-bold text-white tracking-wider mb-4">THAMES</h1>
+            <h2 class="text-2xl md:text-3xl font-bold text-white tracking-wide mb-8">ENGLISH ACADEMY</h2>
+            <p class="text-lg md:text-xl text-white mb-10 max-w-2xl mx-auto">Londra'nın kalbinden gelen İngilizce eğitimi ile dünya vatandaşı olma yolculuğunuz başlıyor.</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#kids" class="w-full sm:w-auto bg-yellow-400 hover:bg-yellow-500 text-[#001F3F] px-6 py-3 rounded-md font-bold text-lg">Kurslarımız</a>
+                <a href="#form" class="w-full sm:w-auto bg-transparent hover:bg-white hover:bg-opacity-10 text-white border-2 border-white px-6 py-3 rounded-md font-bold text-lg">Başvuru Yap</a>
             </div>
         </div>
     </section>
 
     <!-- KURSLAR -->
-    <section class="py-12 px-6 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+    <section class="py-12 px-4 md:px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            <!-- Kids -->
+            <div id="kids" class="bg-white p-5 md:p-6 rounded-xl border shadow">
+                <h2 class="text-xl md:text-2xl font-bold text-blue-800 mb-2">Thames Kids (160 Saat - 2 Kur)</h2>
+                <p>7–12 yaş için eğlenceli, oyun temelli İngilizce eğitimi.</p>
+                <h3 class="text-blue-600 font-semibold mt-4">Kur 1 (80 Saat)</h3>
+                <ul class="list-disc list-inside text-sm mt-1">
+                    <li>Amaç: Temel İngilizce yapılarla tanışma</li>
+                    <li>Hedef: Alfabe, sayılar, renkler, cümleler</li>
+                    <li>Kazanımlar: Basit cümleler, eşleştirme, anlama</li>
+                </ul>
+                <h3 class="text-blue-600 font-semibold mt-4">Kur 2 (80 Saat)</h3>
+                <ul class="list-disc list-inside text-sm mt-1">
+                    <li>Amaç: Günlük konuşmalar, soru-cevap</li>
+                    <li>Hedef: Diyalog kurma, kendini tanıtma</li>
+                    <li>Kazanımlar: Kısa metinleri anlama/anlatma</li>
+                </ul>
+                <div class="mt-4 bg-yellow-100 p-4 border rounded">
+                    <p><strong>Kampanya:</strong> <del>40.000 TL</del> → <span class="text-green-700 font-bold">34.000 TL</span></p>
+                    <p class="text-sm text-gray-600 italic">Peşin 33.000 | Yayın: 2×5.000 TL</p>
+                </div>
+            </div>
 
-        <!-- Kids -->
-        <div id="kids" class="bg-white p-6 rounded-xl border shadow">
-            <h2 class="text-2xl font-bold text-blue-800 mb-2">Thames Kids (160 Saat - 2 Kur)</h2>
-            <p>7–12 yaş için eğlenceli, oyun temelli İngilizce eğitimi.</p>
-            <h3 class="text-blue-600 font-semibold mt-4">Kur 1 (80 Saat)</h3>
-            <ul class="list-disc list-inside text-sm mt-1">
-                <li>Amaç: Temel İngilizce yapılarla tanışma</li>
-                <li>Hedef: Alfabe, sayılar, renkler, cümleler</li>
-                <li>Kazanımlar: Basit cümleler, eşleştirme, anlama</li>
-            </ul>
-            <h3 class="text-blue-600 font-semibold mt-4">Kur 2 (80 Saat)</h3>
-            <ul class="list-disc list-inside text-sm mt-1">
-                <li>Amaç: Günlük konuşmalar, soru-cevap</li>
-                <li>Hedef: Diyalog kurma, kendini tanıtma</li>
-                <li>Kazanımlar: Kısa metinleri anlama/anlatma</li>
-            </ul>
-            <div class="mt-4 bg-yellow-100 p-4 border rounded">
-                <p><strong>Kampanya:</strong> <del>40.000 TL</del> → <span class="text-green-700 font-bold">34.000 TL</span></p>
-                <p class="text-sm text-gray-600 italic">Peşin 33.000 | Yayın: 2×5.000 TL</p>
+            <!-- Future -->
+            <div id="future" class="bg-white p-5 md:p-6 rounded-xl border shadow">
+                <h2 class="text-xl md:text-2xl font-bold text-blue-800 mb-2">Thames Future (288 Saat - YDT)</h2>
+                <p>YDT sınavına %100 odaklı yoğunlaştırılmış İngilizce programı.</p>
+                <ul class="list-disc list-inside text-sm mt-3">
+                    <li>Amaç: Okuma, anlama, bağlaç ve strateji geliştirme</li>
+                    <li>Hedef: Tüm soru türlerine hâkimiyet</li>
+                    <li>Kazanım: Zaman yönetimi + yüksek puan</li>
+                </ul>
+                <div class="mt-4 bg-yellow-100 p-4 border rounded">
+                    <p><strong>Kampanya:</strong> <del>72.000 TL</del> → <span class="text-green-700 font-bold">60.000 TL</span></p>
+                    <p class="text-sm text-gray-600 italic">Peşin 58.000 | Yayın: 15.000 TL</p>
+                </div>
+            </div>
+
+            <!-- Campus -->
+            <div id="campus" class="bg-white p-5 md:p-6 rounded-xl border shadow">
+                <h2 class="text-xl md:text-2xl font-bold text-blue-800 mb-2">Thames Campus (192 Saat)</h2>
+                <p>Üniversite hazırlık atlama, akademik İngilizce ve sınav desteği (IELTS/TOEFL).</p>
+                <p class="text-sm text-gray-600 italic mt-2">Fiyat için iletişime geçin.</p>
+            </div>
+
+            <!-- Pro -->
+            <div id="pro" class="bg-white p-5 md:p-6 rounded-xl border shadow">
+                <h2 class="text-xl md:text-2xl font-bold text-blue-800 mb-2">Thames Pro (288 Saat)</h2>
+                <p>Yetişkinlere yönelik konuşma, yazma, iş İngilizcesi ve profesyonel iletişim.</p>
+                <p class="text-sm text-gray-600 italic mt-2">Fiyat için iletişime geçin.</p>
             </div>
         </div>
-
-        <!-- Future -->
-        <div id="future" class="bg-white p-6 rounded-xl border shadow">
-            <h2 class="text-2xl font-bold text-blue-800 mb-2">Thames Future (288 Saat - YDT)</h2>
-            <p>YDT sınavına %100 odaklı yoğunlaştırılmış İngilizce programı.</p>
-            <ul class="list-disc list-inside text-sm mt-3">
-                <li>Amaç: Okuma, anlama, bağlaç ve strateji geliştirme</li>
-                <li>Hedef: Tüm soru türlerine hâkimiyet</li>
-                <li>Kazanım: Zaman yönetimi + yüksek puan</li>
-            </ul>
-            <div class="mt-4 bg-yellow-100 p-4 border rounded">
-                <p><strong>Kampanya:</strong> <del>72.000 TL</del> → <span class="text-green-700 font-bold">60.000 TL</span></p>
-                <p class="text-sm text-gray-600 italic">Peşin 58.000 | Yayın: 15.000 TL</p>
-            </div>
-        </div>
-
-        <!-- Campus -->
-        <div id="campus" class="bg-white p-6 rounded-xl border shadow">
-            <h2 class="text-2xl font-bold text-blue-800 mb-2">Thames Campus (192 Saat)</h2>
-            <p>Üniversite hazırlık atlama, akademik İngilizce ve sınav desteği (IELTS/TOEFL).</p>
-            <p class="text-sm text-gray-600 italic mt-2">Fiyat için iletişime geçin.</p>
-        </div>
-
-        <!-- Pro -->
-        <div id="pro" class="bg-white p-6 rounded-xl border shadow">
-            <h2 class="text-2xl font-bold text-blue-800 mb-2">Thames Pro (288 Saat)</h2>
-            <p>Yetişkinlere yönelik konuşma, yazma, iş İngilizcesi ve profesyonel iletişim.</p>
-            <p class="text-sm text-gray-600 italic mt-2">Fiyat için iletişime geçin.</p>
-        </div>
-
     </section>
 
     <!-- BAŞVURU FORMU -->
-    <section id="form" class="py-16 px-6 max-w-xl mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-8 text-blue-800">Kurs Başvuru Formu</h2>
-        <form id="applicationForm" class="space-y-6 bg-white p-6 rounded-xl shadow border">
-            <input type="text" name="name" placeholder="Ad Soyad" required class="w-full border px-3 py-2 rounded"/>
-            <input type="email" name="email" placeholder="E-posta" required class="w-full border px-3 py-2 rounded"/>
-            <input type="tel" name="phone" placeholder="Telefon" required class="w-full border px-3 py-2 rounded"/>
-            <select name="course" required class="w-full border px-3 py-2 rounded">
+    <section id="form" class="py-12 md:py-16 px-4 md:px-6 max-w-xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-6 md:mb-8 text-blue-800">Kurs Başvuru Formu</h2>
+        <form id="applicationForm" class="space-y-4 md:space-y-6 bg-white p-5 md:p-6 rounded-xl shadow border">
+            <input type="text" name="name" placeholder="Ad Soyad" required class="w-full border px-3 py-2 rounded text-base"/>
+            <input type="email" name="email" placeholder="E-posta" required class="w-full border px-3 py-2 rounded text-base"/>
+            <input type="tel" name="phone" placeholder="Telefon" required class="w-full border px-3 py-2 rounded text-base"/>
+            <select name="course" required class="w-full border px-3 py-2 rounded text-base">
                 <option value="">Kurs Seçin</option>
                 <option>Thames Kids</option>
                 <option>Thames Future (YDT)</option>
                 <option>Thames Campus</option>
                 <option>Thames Pro</option>
             </select>
-            <select name="branch" required class="w-full border px-3 py-2 rounded">
+            <select name="branch" required class="w-full border px-3 py-2 rounded text-base">
                 <option value="">Şube Seçin</option>
                 <option>Gebze</option>
                 <option>Esenyalı</option>
                 <option>Sultanbeyli</option>
                 <option>Çayırova</option>
             </select>
-            <textarea name="message" rows="3" placeholder="Ek Notunuz (isteğe bağlı)" class="w-full border px-3 py-2 rounded"></textarea>
-            <button type="submit" class="w-full bg-[#001F3F] text-white py-2 rounded hover:bg-blue-800">Başvuruyu Gönder</button>
+            <textarea name="message" rows="3" placeholder="Ek Notunuz (isteğe bağlı)" class="w-full border px-3 py-2 rounded text-base"></textarea>
+            <button type="submit" class="w-full bg-[#001F3F] text-white py-3 rounded hover:bg-blue-800 text-base font-medium">Başvuruyu Gönder</button>
             <p id="successMsg" class="text-green-600 text-sm hidden text-center mt-2">✅ Başvurunuz başarıyla alındı!</p>
             <p class="text-xs text-center text-gray-500 mt-2">Başvurunuz oktayavci52@gmail.com adresine iletilecektir.</p>
         </form>
@@ -140,8 +168,8 @@
 
     <!-- FOOTER -->
     <footer class="bg-[#001F3F] text-white py-8">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                 <div>
                     <h3 class="text-lg font-bold mb-4">Thames English Academy</h3>
                     <p class="text-sm">İngilizce eğitiminde 15 yılı aşkın deneyim ve uzmanlık.</p>
@@ -151,7 +179,7 @@
                     <p class="text-sm">Telefon: (0212) 123 45 67</p>
                     <p class="text-sm">E-posta: info@thames.edu.tr</p>
                 </div>
-                <div>
+                <div class="sm:col-span-2 md:col-span-1">
                     <h3 class="text-lg font-bold mb-4">Sosyal Medya</h3>
                     <div class="flex space-x-4">
                         <a href="#" class="text-white hover:text-yellow-300">
@@ -179,6 +207,23 @@
     </footer>
 
     <script>
+        // Mobil menü toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Mobil menü linklerinin tıklandığında menüyü kapatması
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Form gönderme
         const form = document.getElementById("applicationForm");
         const successMsg = document.getElementById("successMsg");
 
